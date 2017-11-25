@@ -1,4 +1,4 @@
-###[**廖雪峰的官方网站-Javascript教程**](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+###[*廖雪峰的官方网站-Javascript教程**](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 
 - [x] 快速入门
 
@@ -139,142 +139,145 @@
 
       - [x] 高阶函数
 
-            * [x] map/reduce
+            - [x] map/reduce
 
-             字符串转为数字：
+                   字符串转为数字：
 
-            x.charCodeAt() - 48
+                  x.charCodeAt() - 48
 
-            ```
-            // Consider:
-            ['1', '2', '3'].map(parseInt);
-            // While one could expect [1, 2, 3]
-            // The actual result is [1, NaN, NaN]
+                  ```javascript
+                  // Consider:
+                  ['1', '2', '3'].map(parseInt);
+                  // While one could expect [1, 2, 3]
+                  // The actual result is [1, NaN, NaN]
+                
+                  // parseInt is often used with one argument, but takes two.
+                  // The first is an expression and the second is the radix.
+                  // To the callback function, Array.prototype.map passes 3 arguments: 
+                  // the element, the index, the array
+                  // The third argument is ignored by parseInt, but not the second one,
+                  // hence the possible confusion. See the blog post for more details
+                
+                  function returnInt(element) {
+                    return parseInt(element, 10);
+                  }
+                
+                  ['1', '2', '3'].map(returnInt); // [1, 2, 3]
+                  // Actual result is an array of numbers (as expected)
+                
+                  // Same as above, but using the concise arrow function syntax
+                  ['1', '2', '3'].map( str => parseInt(str) );
+                
+                  // A simpler way to achieve the above, while avoiding the "gotcha":
+                  ['1', '2', '3'].map(Number); // [1, 2, 3]
+                  // but unlike `parseInt` will also return a float or (resolved) exponential notation:
+                  ['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+                  ```
+                
+                  ​
 
-            // parseInt is often used with one argument, but takes two.
-            // The first is an expression and the second is the radix.
-            // To the callback function, Array.prototype.map passes 3 arguments: 
-            // the element, the index, the array
-            // The third argument is ignored by parseInt, but not the second one,
-            // hence the possible confusion. See the blog post for more details
+            - [x] filter
 
-            function returnInt(element) {
-              return parseInt(element, 10);
-            }
+            - [x] sort
 
-            ['1', '2', '3'].map(returnInt); // [1, 2, 3]
-            // Actual result is an array of numbers (as expected)
+                  `Array`的`sort()`方法默认把所有元素先转换为String再排序
 
-            // Same as above, but using the concise arrow function syntax
-            ['1', '2', '3'].map( str => parseInt(str) );
+                  `sort()`方法也是一个高阶函数，它还可以接收一个比较函数来实现自定义的排序
 
-            // A simpler way to achieve the above, while avoiding the "gotcha":
-            ['1', '2', '3'].map(Number); // [1, 2, 3]
-            // but unlike `parseInt` will also return a float or (resolved) exponential notation:
-            ['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
-            ```
-
-            * [x] filter
-            * [x] sort
-
-            `Array`的`sort()`方法默认把所有元素先转换为String再排序
-
-            `sort()`方法也是一个高阶函数，它还可以接收一个比较函数来实现自定义的排序
-
-            ```
-            arr.sort(function (x, y) {
-                if (x < y) {
-                    return -1;
-                }
-                if (x > y) {
-                    return 1;
-                }
-                return 0;
-            });
-            ```
-
-            `sort()`方法会直接对`Array`进行修改，它返回的结果仍是当前`Array`
+                  ```javascript
+                  arr.sort(function (x, y) {
+                  	if (x < y) {
+                      	return -1;
+                  	}
+                  	if (x > y) {
+                      	return 1;
+                  	}
+                  	return 0;
+                  });
+                  ```
+                  `sort()`方法会直接对`Array`进行修改，它返回的结果仍是当前`Array`
 
             ******
 
-            ​														2017.11.11-2017.11.24
+            2017.11.11-2017.11.24
 
       - [x] 闭包
 
         高阶函数可以将函数作为返回值
 
-      `lazy_sum()`时，返回的并不是求和结果，而是求和函数->调用函数`f`时，才真正计算求和的结果
+        `lazy_sum()`时，返回的并不是求和结果，而是求和函数->调用函数`f`时，才真正计算求和的结果
 
-      当`lazy_sum`返回函数`sum`时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”程序结构
+        当`lazy_sum`返回函数`sum`时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”程序结构
 
-      返回闭包时牢记的一点就是：**返回函数不要引用任何循环变量，或者后续会发生变化的变量**
+        返回闭包时牢记的一点就是：**返回函数不要引用任何循环变量，或者后续会发生变化的变量**
 
-      一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变
+        一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变
 
-      ```javascript
-      function count() {
-          var arr = [];
-          for (var i=1; i<=3; i++) {
-              arr.push((function (n) {
-                  return function () {
-                      return n * n;
-                  }
-              })(i));
-          }
-          return arr;
-      }
+        ```javascript
+        function count() {
+            var arr = [];
+            for (var i=1; i<=3; i++) {
+                arr.push((function (n) {
+                    return function () {
+                        return n * n;
+                    }
+                })(i));
+            }
+            return arr;
+        }
 
-      var results = count();
-      var f1 = results[0];
-      var f2 = results[1];
-      var f3 = results[2];
-      ```
+        var results = count();
+        var f1 = results[0];
+        var f2 = results[1];
+        var f3 = results[2];
+        ```
 
-      借助闭包，同样可以封装一个私有变量->闭包就是携带状态的函数，并且它的状态可以完全对外隐藏起来
+        ​
+
+        借助闭包，同样可以封装一个私有变量->闭包就是携带状态的函数，并且它的状态可以完全对外隐藏起来
 
       - [x] 箭头函数
 
-      lambda表达式 x => x * x       (x, y) => x * x + y * y         () => 3.14
+            lambda表达式 x => x * x       (x, y) => x * x + y * y         () => 3.14
 
-      ```javascript
-      (x, y, ...rest) => {
-          var i, sum = x + y;
-          for (i=0; i<rest.length; i++) {
-              sum += rest[i];
-          }
-          return sum;
-      }
-      ```
+            ```javascript
+            (x, y, ...rest) => {
+                var i, sum = x + y;
+                for (i=0; i<rest.length; i++) {
+                    sum += rest[i];
+                }
+                return sum;
+            }
+            ```
 
-      返回对象`x => ({ foo: x })`  不能：`x => { foo: x }`会有语法冲突
+            返回对象`x => ({ foo: x })`  不能：`x => { foo: x }`会有语法冲突
 
-      ```javascript
-      arr.sort((x, y) => {
-          if (x<y)return -1;
-          return 1;
-      });//-1不用交换 1交换
-      ```
+            ```javascript
+            arr.sort((x, y) => {
+                if (x<y)return -1;
+                return 1;
+            });//-1不用交换 1交换
+            ```
 
       - [x] generator
 
-      `for ... of`循环迭代generator对象，这种方式不需要我们自己判断`done`
+            `for ... of`循环迭代generator对象，这种方式不需要我们自己判断`done`
 
-      因为generator可以在执行过程中多次返回，所以它看上去就像一个可以记住执行状态的函数，利用这一点，写一个generator就可以实现需要用面向对象才能实现的功能
+            因为generator可以在执行过程中多次返回，所以它看上去就像一个可以记住执行状态的函数，利用这一点，写一个generator就可以实现需要用面向对象才能实现的功能
 
-      generator还有另一个巨大的好处，就是把异步回调代码变成“同步”代码
+            generator还有另一个巨大的好处，就是把异步回调代码变成“同步”代码
 
 - [x] 标准对象
 
-
       **包装对象**
 
-      * [x] Date
+      - [x] Date
 
-       JavaScript的Date对象月份值从0开始，牢记0=1月，1=2月，2=3月，……，11=12月。
+             JavaScript的Date对象月份值从0开始，牢记0=1月，1=2月，2=3月，……，11=12月。
 
-      使用Date.parse()时传入的字符串使用实际月份01~12，转换为Date对象后getMonth()获取的月份值为0~11。
+            使用Date.parse()时传入的字符串使用实际月份01~12，转换为Date对象后getMonth()获取的月份值为0~11。
 
-      * [x] [<u>***RegExp***</u>](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000)
+      - [x]  [***RegExp***](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000)
 
             基本语法,进阶,切分字符串
 
@@ -284,22 +287,21 @@
 
             `exec()`方法在匹配成功后，会返回一个`Array`，第一个元素是正则表达式匹配到的整个字符串，后面的字符串表示匹配成功的子串。
 
-            贪婪匹配  加个`?`就可以让`\d+`采用非贪婪匹配
+            贪婪匹配  加个`?`就可以让`\d+`采用非贪婪匹。
 
-            全局搜索  全局匹配可以多次执行`exec()`方法来搜索一个匹配的字符串,当我们指定`g`标志后，每次运行`exec()`，正则表达式本身会更新`lastIndex`属性，表示上次匹配到的最后索引
+            全局搜索  全局匹配可以多次执行`exec()`方法来搜索一个匹配的字符串,当我们指定`g`标志后，每次运行`exec()`，正则表达式本身会更新`lastIndex`属性，表示上次匹配到的最后索引。
 
             var re = /^[\w.]+?\@\w+?\.\w+$/;  			匹配邮箱1
 
             var re = /^<([\w\s]*)>\s*([\w.]+?\@\w+?.\w+)$/;  	匹配邮箱2
 
-
-      * [x] JSON
+      - [x]  JSON
 
             把任何JavaScript对象变成JSON，就是把这个对象序列化成一个JSON格式的字符串，这样才能够通过网络传递给其他计算机。
 
-            如果我们收到一个JSON格式的字符串，只需要把它反序列化成一个JavaScript对象，就可以在JavaScript中直接使用这个对象了。
+            如果我们收到一个JSON格式的字符串，只需要把它反序列化成一个JavaScript对象，就可以在JavaScript中直接使用这个对象了。   
 
-            var s = JSON.stringify(xiaoming);
+            var s = JSON.stringify(xiaoming); 
 
             要输出得好看一些，可以加上参数，按缩进输出 JSON.stringify(xiaoming, null, '  ');
 
@@ -309,20 +311,21 @@
 
             ```javascript
             function convert(key, value) {
-                if (typeof value === 'string') {
-                    return value.toUpperCase();
-                }
-                return value;
+                    if (typeof value === 'string') {
+                    	return value.toUpperCase();
+                    }
+                    return value;
             }
-
             JSON.stringify(xiaoming, convert, '  ');
             ```
 
-            精确控制如何序列化小明，可以给`xiaoming`定义一个`toJSON()`的方法，直接返回JSON应该序列化的数据
+            精确控制如何序列化小明，可以给`xiaoming`定义一个`toJSON()`的方法，直接返回JSON应该序列化的数据。
 
-            **反序列化  ** JSON.parse()
+            **反序列化** JSON.parse()
 
-            `JSON.parse()`还可以接收一个函数，用来转换解析出的属性
+            `JSON.parse()`还可以接收一个函数，用来转换解析出的属性                                                                                                     
+
+
 
 - [ ] 面向对象编程
 
