@@ -1,4 +1,4 @@
-###[*廖雪峰的官方网站-Javascript教程**](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+###[廖雪峰的官方网站-Javascript教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 
 - [x] 快速入门
 
@@ -277,7 +277,7 @@
 
             使用Date.parse()时传入的字符串使用实际月份01~12，转换为Date对象后getMonth()获取的月份值为0~11。
 
-      - [x]  [***RegExp***](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000)
+      - [x] [***RegExp***](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000)
 
             基本语法,进阶,切分字符串
 
@@ -295,7 +295,7 @@
 
             var re = /^<([\w\s]*)>\s*([\w.]+?\@\w+?.\w+)$/;  	匹配邮箱2
 
-      - [x]  JSON
+      - [x] JSON
 
             把任何JavaScript对象变成JSON，就是把这个对象序列化成一个JSON格式的字符串，这样才能够通过网络传递给其他计算机。
 
@@ -327,21 +327,113 @@
 
 
 
-- [ ] 面向对象编程
+- [x] 面向对象编程
 
-******
+      * [x] 创建对象
 
-​																			2017.11.25
+      JavaScript还可以用一种构造函数的方法来创建对象。它的用法是，先定义一个构造函数：
+
+      ```javascript
+      function Student(name) {
+          this.name = name;
+          this.hello = function () {
+              alert('Hello, ' + this.name + '!');
+          }
+      }
+      ```
+
+      用关键字`new`来调用这个函数，并返回一个对象。
+
+      可以编写一个`createStudent()`函数，在内部封装所有的`new`操作:
+
+      ```javascript
+      function Student(props) {
+          this.name = props.name || '匿名'; // 默认值为'匿名'
+          this.grade = props.grade || 1; // 默认值为1
+      }
+
+      Student.prototype.hello = function () {
+          alert('Hello, ' + this.name + '!');
+      };
+
+      function createStudent(props) {
+          return new Student(props || {})
+      }
+      ```
+
+      * [x] 原型继承
+
+      把继承这个动作用一个`inherits()`函数封装起来，还可以隐藏`F`的定义:
+
+      ```javascript
+      function inherits(Child, Parent) {
+          var F = function () {};
+          F.prototype = Parent.prototype;
+          Child.prototype = new F();
+          Child.prototype.constructor = Child;
+      }
+      ```
+
+      这个`inherits()`函数可以复用：
+
+      ```javascript
+      function Student(props) {
+          this.name = props.name || 'Unnamed';
+      }
+
+      Student.prototype.hello = function () {
+          alert('Hello, ' + this.name + '!');
+      }
+
+      function PrimaryStudent(props) {
+          Student.call(this, props);
+          this.grade = props.grade || 1;
+      }
+
+      // 实现原型继承链:
+      inherits(PrimaryStudent, Student);
+
+      // 绑定其他方法到PrimaryStudent原型:
+      PrimaryStudent.prototype.getGrade = function () {
+          return this.grade;
+      };
+      ```
+
+      JavaScript的原型继承实现方式就是：
+
+      1. 定义新的构造函数，并在内部用`call()`调用希望“继承”的构造函数，并绑定`this`；
+      2. 借助中间函数`F`实现原型链继承，最好通过封装的`inherits`函数完成；
+      3. 继续在新的构造函数的原型上定义新方法。
+
+      * [x] class继承
+
+      ```javascript
+      class PrimaryStudent extends Student {
+          constructor(name, grade) {
+              super(name); // 记得用super调用父类的构造方法!
+              this.grade = grade;
+          }
+
+          myGrade() {
+              alert('I am at grade ' + this.grade);
+          }
+      }
+      ```
+
 
 - [ ] 浏览器
 - [ ] jQuery
 - [ ] 错误处理
 - [ ] underscore
-- [ ] Node.js
-
+- [x] Node.js
+      * [x]  安装Node.js和npm，搭建环境，模块
+      * [x]  基本模块
+            * [x]  fs
+            * [x]  stream
+            * [x]  http
+            * [x] crypto
 
 
 
 - [ ] React
-
 
