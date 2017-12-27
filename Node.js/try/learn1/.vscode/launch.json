@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run test3.js",
+            "name": "Run test6.js",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/test3.js",
+            "program": "${workspaceRoot}/test6.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",

@@ -426,12 +426,12 @@
 - [ ] 错误处理
 - [ ] underscore
 - [x] Node.js
-      * [x]  安装Node.js和npm，搭建环境，模块
-      * [x]  基本模块
-            * [x]  fs
-            * [x]  stream
-            * [x]  http
-            * [x] crypto
+      * [x] 安装Node.js和npm，搭建环境，模块
+      * [x] 基本模块
+            * [x] fs   文件
+            * [x] stream  流操作
+            * [x] http    http服务器程序
+            * [ ] crypto   加密
 
 
 
