@@ -67,7 +67,7 @@ def arm_and_takeoff(aTargetAltitude):
 
 
 #Arm and take of to altitude of 5 meters
-arm_and_takeoff(5)
+arm_and_takeoff(4)
 
 def get_location_metres(original_location, dNorth, dEast):
     """
@@ -152,18 +152,115 @@ the distance-to-target.
 """	
 print("TRIANGLE path using standard Vehicle.simple_goto()")
 
-print("Set groundspeed to 5m/s.")
-vehicle.groundspeed=5
 
-print("Position North 16 West 10")
-goto(16, -10)
+vehicle.groundspeed=1.646181271
+goto(0, 30)
+vehicle.groundspeed=0.650744405
+goto(30, 0)
+vehicle.groundspeed=1.892575248
+goto(0, -30)
+vehicle.groundspeed=1.20670462
+goto(-30, 0)
 
-print("Position North 0 East 20")
-goto(0, 20)
+vehicle.groundspeed=2.976768258
+goto(0, 30)
+vehicle.groundspeed=4.473499523
+goto(30, 0)
+vehicle.groundspeed=4.317955292
+goto(0, -30)
+vehicle.groundspeed=2.897311943
+goto(-30, 0)
 
-print("Position North -16 West 10")
-goto(-16, -10)
+vehicle.groundspeed=2.764199233
+goto(0, 30)
+vehicle.groundspeed=0.699058058
+goto(30, 0)
+vehicle.groundspeed=2.428589795
+goto(0, -30)
+vehicle.groundspeed=2.680717191
+goto(-30, 0)
 
+vehicle.groundspeed=1.045444084
+goto(0, 30)
+vehicle.groundspeed=2.998018991
+goto(30, 0)
+vehicle.groundspeed=3.852981982
+goto(0, -30)
+vehicle.groundspeed=4.793639738
+goto(-30, 0)
+
+vehicle.groundspeed=2.104503395
+goto(0, 30)
+vehicle.groundspeed=0.894597531
+goto(30, 0)
+vehicle.groundspeed=3.037585959
+goto(0, -30)
+vehicle.groundspeed=3.429827234
+goto(-30, 0)
+
+vehicle.groundspeed=0.977740468
+goto(0, 30)
+vehicle.groundspeed=1.632521133
+goto(30, 0)
+vehicle.groundspeed=3.413516227
+goto(0, -30)
+vehicle.groundspeed=4.815190606
+goto(-30, 0)
+
+vehicle.groundspeed=2.103628103
+goto(0, 30)
+vehicle.groundspeed=2.192258231
+goto(30, 0)
+vehicle.groundspeed=4.819465624
+goto(0, -30)
+vehicle.groundspeed=4.855727781
+goto(-30, 0)
+
+vehicle.groundspeed=3.559845097
+goto(0, 30)
+vehicle.groundspeed=3.221917894
+goto(30, 0)
+vehicle.groundspeed=3.0593665
+goto(0, -30)
+vehicle.groundspeed=3.964837426
+goto(-30, 0)
+
+
+vehicle.groundspeed=4.290106536
+goto(0, 30)
+vehicle.groundspeed=4.150211382
+goto(30, 0)
+vehicle.groundspeed=4.593260762
+goto(0, -30)
+vehicle.groundspeed=1.434758947
+goto(-30, 0)
+
+vehicle.groundspeed=3.209818535
+goto(0, 30)
+vehicle.groundspeed=4.277558828
+goto(30, 0)
+vehicle.groundspeed=1.98721532
+goto(0, -30)
+vehicle.groundspeed=2.572966626
+goto(-30, 0)
+
+vehicle.groundspeed=0.725683119
+goto(0, 30)
+vehicle.groundspeed=3.48425721
+goto(30, 0)
+vehicle.groundspeed=1.723840007
+goto(0, -30)
+vehicle.groundspeed=3.007324107
+goto(-30, 0)
+
+vehicle.groundspeed=3.065956599
+goto(0, 30)
+vehicle.groundspeed=2.315413541
+goto(30,0)
+vehicle.groundspeed=0.725683119
+goto(0, -30)
+vehicle.groundspeed=3.48425721
+goto(-30, 0)
 
 
 print("Setting LAND mode...")
