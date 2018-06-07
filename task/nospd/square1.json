@@ -1,0 +1,515 @@
+[
+    {
+        "Action_type": 0,
+        "CID": 1,
+        "Alt": 3,
+        "Step": 0,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 1,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 2,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 3,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 4,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 5,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 6,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 7,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 8,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 9,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 10,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 11,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 12,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 13,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 14,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 15,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 16,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 17,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 18,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 19,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 20,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 21,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 22,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 23,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 24,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 25,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 26,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 27,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 28,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 29,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 30,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 31,
+        "Sync": false
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 32,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 33,
+        "Sync": true
+    },
+
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 34,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 35,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 36,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 37,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 38,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 39,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 40,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 41,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 42,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 43,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 44,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": 30,
+        "Alt": 3,
+        "Step": 45,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 46,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": 0,
+        "E": -30,
+        "Alt": 3,
+        "Step": 47,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 2,
+        "CID": 1,
+        "N": -30,
+        "E": 0,
+        "Alt": 3,
+        "Step": 48,
+        "Sync": false
+    },
+
+    {
+        "Action_type": 3,
+        "CID": 1,
+        "Lat": 0,
+        "Lon": 0,
+        "Step": 49,
+        "Sync": false
+    }
+
+]

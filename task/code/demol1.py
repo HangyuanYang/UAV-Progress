@@ -26,7 +26,7 @@ import math
 # Connect to the Vehicle
 # print('Connecting to vehicle on: %s' % connection_string)
 # vehicle = connect(connection_string, wait_ready=True)
-vehicle = connect("/dev/ttyUSB0", baud=57600, wait_ready=True)
+vehicle = connect("COM3", baud=57600, wait_ready=True)
 
 
 def arm_and_takeoff(aTargetAltitude):
